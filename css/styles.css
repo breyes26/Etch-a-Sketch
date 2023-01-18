@@ -5,9 +5,9 @@
 }
 
 
-#title{
+*{
     font-family: 'Amatic SC', cursive;
-    font-size: 80px;
+    font-size: 8vh;
     color: rgb(218, 180, 84);
 }
 body,
@@ -28,10 +28,10 @@ body{
 
 div.sketcher-wrap{
     height: 60vh;
-    width: 80vh;
+    width: 50vw;
+    min-width: 600px;
     position: relative;
     background-color: gray;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;;
 }
 
 div.container-grid{
@@ -46,23 +46,27 @@ div.container-grid{
 }
 
 div.grid-cell{
-    border-radius: 1px;
-    background-color: gray;
+    border-radius: 5px;
+    
+
 }
     
 div.buttons{
     display: flex;
     flex-direction: row;
+    flex-grow: 1;
     gap: 20px;
     justify-content: space-around;
-    padding-bottom: 30px;
+    align-items: center;
+    height: 100%;
+   
 }
 
 div.circle{
-    background-color: whitesmoke;
+    background-color: rgb(234, 220, 220);
     border-radius: 100px;
-    height:11vh;
-    width: 11vh;
+    height: 15vh;
+    width: 15vh;
     outline-style: solid;
     outline-color: gray;
     outline-width: 2px;
@@ -70,10 +74,106 @@ div.circle{
 }
 
 div.left{
-    margin-right: 12vw;
+    margin-right: 5vw;
 }
 div.right{
-    margin-left: 12vw;
+    margin-left: 5vw;
 }
 
+div.img-wrp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    height: 75%;
+    width: 100%; 
+}
 
+button{
+    display: flex;
+    flex-direction: column;
+    row-gap: 4px;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    width: 10vw;
+    height: 8vh;
+    border-style: none;
+    transition: all .07s ease;
+    font-size: 25%;
+
+}
+
+div.choices{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.hovered{
+    transform: scale(1.1);
+}
+
+img{
+    background-color: transparent;
+    width: auto;
+    height: 100%;
+}
+
+div.bottom-section{
+    display: flex;
+    margin:  20px;
+    height: 15vh;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+}
+
+div.slider-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 25%;
+
+}
+
+input.slider{
+    width: 20vh;
+    appearance: none;
+    background-color: rgb(218, 180, 84);
+    border-radius: 30px;
+    height: 10px;
+}
+
+input[type=range]::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    cursor: pointer;
+    background-color: rgb(234, 220, 220);
+    border-radius: 20px;
+    height: 36px;
+    width: 16px;
+    box-shadow:rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;;
+
+}
+
+div.slider-io{
+    padding: 20px 0 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    column-gap: 20px;
+}
+
+div.slider-io div.input{
+    display: flex;
+    flex-direction: column;
+}
+
+div.slider-io p.output{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40%;
+}

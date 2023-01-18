@@ -16,11 +16,43 @@
     <div class="sketcher-wrap">
         <div class="container-grid"></div>
     </div>
-    <div class="buttons">
+    <div class="bottom-section">
         <div class="circle left"></div>
-        <button class="dimension-btn">Dimension</button>
-        <button class="color-btn">Color</button>
+        <div class="choices">
+            <div class="buttons">
+                <button id="draw-btn">
+                    <div class="img-wrp">
+                        <img src="images/pencil.png" alt="Pencil Icon">
+                    </div> 
+                    draw
+                </button>
+                <button id="erase-btn">
+                    <div class="img-wrp">
+                        <img src="images/eraser.png" alt="Eraser Icon">
+                    </div> 
+                    ERASE
+                </button>
+                <button id="rgb-btn">
+                    <div class="img-wrp">
+                        <img src="images/rainbow.png" alt="Rainbow Icon">
+                    </div> 
+                    RGB
+                </button>
+            </div>
+            <div class="slider-io">
+                <div class="input">
+                    <div class="slider-container">
+                        <input class='slider' type="range" min="0" max="100" value="20" step="10" class="slider" id="myRange">
+                    </div>
+                </div>
+                <p id="range-output" class="output">Grid-Size: 20x20</p>
+            </div>
+            
+        </div>
         <div class="circle right"></div>
     </div>
+        
+  
+   
 </body>
 </html>
